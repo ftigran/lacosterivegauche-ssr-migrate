@@ -1,0 +1,215 @@
+header.header {
+  position: fixed;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 28px 0;
+  z-index: 1300;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    background: rgba(255, 255, 255, 0.44) !important;
+    backdrop-filter: blur(44px);
+    transition: all 0.3s;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+  }
+  &.scrolled {
+    &:before {
+      opacity: 1;
+    }
+  }
+  .headerContainer {
+    max-width: 1260px;
+    margin: auto;
+    padding: 0 30px;
+    .list {
+      padding-bottom: 11px;
+    }
+  }
+
+  a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #363636;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: color 0.3s;
+    display: inline-block;
+    // &.active:after {
+    //   border-bottom-color: #363636;
+    //   transform: scaleX(1);
+    // }
+    &:after {
+      display: block;
+      content: '';
+      border-bottom: solid 1.25px #235437;
+      transform: scaleX(0);
+      transition: transform 300ms ease-in-out;
+    }
+    &:hover {
+      // opacity: 0.6;
+      // text-shadow: 0px 0px 5px #fff;
+
+      color: #235437;
+      &:after {
+        transform: scaleX(1);
+        border-bottom-color: #235437 !important;
+      }
+    }
+    &.bordered {
+      border: 2px solid #beae8e;
+      border-radius: 6px;
+      padding: 5px 18px;
+      font-size: 16px;
+      transition: all 0.3s;
+      &:after {
+        display: none;
+      }
+      &:hover {
+        background: #beae8e;
+        color: #fff;
+        opacity: 1;
+        text-shadow: none;
+      }
+      &:active {
+        background: #a79778;
+      }
+    }
+  }
+  .logo_RG {
+    width: 137px;
+    height: 36px;
+    background: url('../../img/logo_RG.png') no-repeat;
+    background-size: contain;
+  }
+  .logo_Lacoste {
+    align-self: flex-start;
+    margin-left: 20px;
+    width: 213px;
+    height: 33px;
+    background: url('../../img/logo_Lacoste.png') no-repeat;
+    background-size: contain;
+  }
+}
+@media (max-width: 1280px) {
+  header.header {
+    a {
+      margin-left: 15px;
+      font-size: 16px;
+    }
+    .logo_RG {
+      width: 110px;
+      height: 29px;
+    }
+    .logo_Lacoste {
+      margin-left: 17px;
+      width: 170px;
+      height: 27px;
+    }
+  }
+}
+.slideMenu {
+  z-index: 1299 !important;
+  .MuiPaper-root {
+    background: #eed9bf;
+    padding-top: 70px;
+    padding-bottom: 35px;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+  }
+  .toReg {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    button {
+      width: 290px;
+      height: 50px;
+
+      background: #285f41;
+      border-radius: 7px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+
+      color: #ffffff;
+    }
+  }
+  a {
+    padding: 15px 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+  }
+}
+@media (max-width: 1050px) {
+  header.header {
+    a {
+      margin-left: 10px;
+      font-size: 15px;
+    }
+  }
+}
+@media (max-width: 959.95px) {
+  header.header {
+    padding: 6px 0;
+    &.transparentBG::before {
+      display: none;
+    }
+    .list {
+      // display: none;
+      padding: 0 !important;
+      min-height: 60px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  header.header {
+    padding: 0;
+
+    .headerMenu {
+      padding: 0;
+      width: 64px;
+      height: 64px;
+    }
+
+    .logo_RG {
+      width: 79px;
+      height: 21px;
+    }
+    .logo_Lacoste {
+      margin-left: 15px;
+      width: 122px;
+      height: 19px;
+    }
+    .headerContainer {
+      padding: 0 0 0 15px;
+    }
+  }
+}

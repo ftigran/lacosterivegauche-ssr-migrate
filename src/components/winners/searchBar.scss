@@ -1,0 +1,99 @@
+.winnersContainer form {
+  max-width: 385px;
+  margin: auto;
+  position: relative;
+  margin-bottom: 19px;
+  background-color: transparent;
+  box-shadow: none;
+
+  .MuiOutlinedInput-root {
+    background: #f7ede1;
+    border-radius: 4px;
+  }
+  fieldset.MuiOutlinedInput-notchedOutline {
+    // background: #fefcfa;
+    // border: 2px solid #f5e0cc;
+    border-color: transparent;
+  }
+  .MuiOutlinedInput-input {
+    padding: 19px 15px;
+  }
+  .MuiInputLabel-outlined,
+  .MuiInputBase-input {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    color: #4b5055;
+  }
+  .MuiFormHelperText-root {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 15px;
+  }
+  .MuiInputBase-input {
+    padding: 29px 15px 9px;
+  }
+  .MuiInputLabel-outlined.MuiInputLabel-shrink {
+    color: rgba(75, 80, 85, 0.66);
+    font-size: 86%;
+    transform: translate(31%, 41%) scale(1);
+  }
+  .MuiInputLabel-outlined.MuiInputLabel-shrink.Mui-error {
+    color: #e6001f;
+  }
+  .winnersButton {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    padding: 0;
+    border: 0;
+    border-radius: 3px;
+    background: #f7ede1;
+    top: 11px;
+    right: 15px;
+    transition: background 0.3s;
+    &:hover {
+      background: #ffffff;
+    }
+    &:active {
+      background: #f4f4f4;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .winnersContainer {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 600px) {
+  .winnersContainer {
+    .titleWinners {
+      font-size: 14px !important;
+      line-height: 17px !important;
+      padding: 22px 0 21px !important;
+    }
+    padding: 0 15px;
+    .MuiInputLabel-outlined {
+      transform: translate(15px, 13px) scale(1);
+    }
+    form {
+      .MuiInputLabel-outlined.MuiInputLabel-shrink {
+        font-size: 75%;
+        transform: translate(13px, -2px) scale(1);
+      }
+      .MuiInputBase-input {
+        padding: 13px 14px 10px;
+      }
+      .winnersButton {
+        top: 5px;
+
+        // right: 11px;
+        // padding: 4px;
+      }
+    }
+  }
+}

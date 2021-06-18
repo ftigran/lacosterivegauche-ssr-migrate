@@ -1,0 +1,226 @@
+.prizWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1064px;
+  padding-top: 30px;
+  position: relative;
+  .prizContainer {
+    width: 750px;
+    position: relative;
+    height: 750px;
+
+    @media (max-width: 800px) {
+      height: auto;
+      width: auto;
+    }
+  }
+  img {
+    border: 2px solid #818181;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+  }
+  h4 {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: bold;
+
+    font-size: 18px;
+    line-height: 18px;
+    /* identical to box height, or 108% */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #235437;
+    margin: 5px;
+  }
+  p {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 122% */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    padding-top: 2px;
+    color: #4b5055;
+  }
+  .priz {
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #c0c0c0;
+    box-sizing: border-box;
+    box-shadow: 0px 7px 42px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    max-width: 226px;
+    // min-height: 312px;
+    padding: 14px;
+    min-height: 295px;
+    // img {
+    //   background: #c0c0c0;
+    // }
+  }
+  .priz1 {
+    max-width: 306px;
+    min-height: 408px;
+    padding: 18px;
+    transform: rotate(-6.26deg);
+    top: -104px;
+    left: 222px;
+
+    z-index: 1;
+    h4 {
+      font-size: 24px;
+      line-height: 26px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  .priz2 {
+    transform: rotate(-6.26deg);
+    left: 26px;
+    top: 82px;
+    // transform: translate(-178px, 138px) rotate(-6.26deg);
+    width: 100%;
+    // .img {
+    //   background: #e8d5c3;
+    //   border: 1.5px solid #818181;
+    //   height: 207px;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   img {
+    //     border: none;
+    //     margin-top: 14px;
+    //     width: 126px;
+    //     transform: rotate(6.26deg);
+    //   }
+    // }
+  }
+  .priz3 {
+    //     transform: translate(100px, 139px) rotate(
+    // 15deg
+    // );
+
+    // right: 26px;
+    top: 85px;
+    right: 15px;
+
+    transform: rotate(15deg);
+  }
+  .priz4 {
+    left: 257px;
+    top: 295px;
+    // transform:translate(-367px, 349px) rotate(6.26deg)  ;
+    transform: rotate(6.26deg);
+  }
+
+  @media (max-width: 800px) {
+    min-height: auto;
+    flex-direction: column;
+    padding-top: 123px;
+    padding-bottom: 217px;
+
+    .priz {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      .imgBG {
+        background: #e8d5c3;
+      }
+    }
+    .priz1 {
+      transform: rotate(-6.26deg);
+      z-index: 3;
+    }
+    .priz2 {
+      z-index: 2;
+      transform: rotate(15deg);
+      margin-top: 8px;
+      margin-left: 27px;
+      // transform: translate(-178px, 138px) rotate(-6.26deg);
+      .img {
+        background: #e8d5c3;
+        border: 1.5px solid #818181;
+        height: 207px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 184px;
+
+        img {
+          border: none;
+          margin-top: 14px;
+          width: 112px;
+          height: auto;
+        }
+      }
+    }
+    .priz3 {
+      margin-top: 15px;
+      margin-left: 29px;
+      z-index: 1;
+
+      transform: rotate(-15deg);
+    }
+    .priz4 {
+      margin-top: 16px;
+      margin-left: 29px;
+      transform: rotate(15deg);
+    }
+  }
+  @media (max-width: 500px) {
+    h4 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    .priz {
+      max-width: 202px;
+      padding: 12px;
+      min-height: 290px;
+    }
+    .priz1 {
+      max-width: 253px;
+      min-height: 349px;
+      padding: 15px;
+      img {
+        width: 221px;
+      }
+
+      h4 {
+        margin: 7px 5px 2px;
+
+        font-size: 24px;
+        line-height: 26px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+    .priz2 {
+      // transform: translate(-178px, 138px) rotate(-6.26deg);
+      .img {
+        height: 184px;
+
+        img {
+          margin-top: 14px;
+          width: 112px;
+          height: auto;
+        }
+      }
+    }
+  }
+}

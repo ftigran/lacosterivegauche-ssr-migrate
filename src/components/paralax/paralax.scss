@@ -1,0 +1,88 @@
+$mobile:600px;
+$pad:960px;
+.period {
+    padding: 32px 0;
+    text-align: center;
+    color: #b73741;
+    font-size: 3vw;
+    font-family: FiraSansCondensed;
+
+    @media screen and (max-width: $mobile) {
+        font-size: 8vw;
+    }
+}
+.timer-container {
+    flex: 0 0 auto;
+    padding: 32px;
+}
+.timer-header {
+    color: #39404a;
+    font-size: 2vw;
+    text-align: center;
+    font-family: FiraSansCondensed;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    @media screen and (max-width: $pad) {
+        font-size: 4vw;
+    }
+    @media screen and (max-width: $mobile) {
+        font-size: 6vw;
+    }
+}
+
+.card {
+    position: absolute;
+
+    will-change: transform;
+}
+
+.container {
+    min-height: 400px;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    z-index: 0;
+    > * {
+        flex: 1 1 auto;
+    }
+    > * {
+        left: 42%;
+        top: 60%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+    img {
+       // max-height: 75vh;
+    }
+    @media screen and (max-width: $mobile) {
+        min-height: 240px;
+        background-image: url("/src/img/main-mobile.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        > * {
+            display: none;
+        }
+    }
+}
+.slogan {
+    position: absolute;
+    left: 62%;
+    top: 40%;
+    transform: translate(0, -50%);
+    z-index: 1;
+}
+.logo {
+    padding: 32px 16px;
+    margin: 0 auto;
+    flex: 0 0 auto;
+    text-align: center;
+    @media screen and (max-width: $pad) {
+        text-align: right;
+        padding: 16px;
+        margin: 0;
+    }
+}

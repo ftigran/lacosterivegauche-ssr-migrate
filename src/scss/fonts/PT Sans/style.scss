@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("./PTSans-Regular.eot");
+  src: local("☺"), url("./PTSans-Regular.woff") format("woff"),
+    url("./PTSans-Regular.ttf") format("truetype"),
+    url("./PTSans-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("./PTSans-Bold.eot");
+  src: local("☺"), url("./PTSans-Bold.woff") format("woff"),
+    url("./PTSans-Bold.ttf") format("truetype"),
+    url("./PTSans-Bold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}

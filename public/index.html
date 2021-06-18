@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/static/media/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta
+      data-n-head="1"
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="/static/media/favicon.png" />
+
+    <meta
+      property="og:image"
+      content="%PUBLIC_URL%/%REACT_APP_SOCIAL_SHARE_IMAGE%"
+    />
+    <meta property="og:title" content="%REACT_APP_SOCIAL_SHARE_TITLE%" />
+    <meta
+      property="og:description"
+      content="%REACT_APP_SOCIAL_SHARE_DESCRIPTION%"
+    />
+    <meta property="og:url" content="%PUBLIC_URL%" />
+
+    <link
+      rel="image_src"
+      href="%PUBLIC_URL%/%REACT_APP_SOCIAL_SHARE_IMAGE%"
+    />
+    <meta name="mrc__share_title" attr="%REACT_APP_SOCIAL_SHARE_TITLE%" />
+    <meta name="description" attr="%REACT_APP_SOCIAL_SHARE_DESCRIPTION%" />
+    <meta
+      name="mrc__share_description"
+      attr="%REACT_APP_SOCIAL_SHARE_DESCRIPTION%"
+    />
+
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+
+    <title><%= process.env.REACT_APP_TITLE %></title>
+
+    <% if (process.env.NODE_ENV === 'production' &&
+    !!process.env.REACT_APP_TRACKING_ID) { %>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "%REACT_APP_TRACKING_ID%");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <% } %>
+    <style type="text/css">
+    body{
+      margin: 0%;
+    }
+    #cssload-loader{
+      background: #E7DACA;
+
+      transition: opacity 0.3s;
+
+	  width: 100vw;
+	height: 100vh;
+	display: flex;
+	position: fixed;
+	z-index: 99999;
+	left: 0;
+	top: 0;
+	align-items: center;
+    }
+    
+    #cssload-loader.anim_fade_out{
+      opacity: 0;
+    }
+.cssload-loader {
+	 position: relative;
+	 left: calc(50% - 31px);
+	 width: 100px;
+	 height: 100px;
+	 perspective: 780px;
+}
+ .cssload-inner {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 box-sizing: border-box;
+	 -o-box-sizing: border-box;
+	 -ms-box-sizing: border-box;
+	 -webkit-box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+	 border-radius: 50%;
+	 -o-border-radius: 50%;
+	 -ms-border-radius: 50%;
+	 -webkit-border-radius: 50%;
+	 -moz-border-radius: 50%;
+}
+ .cssload-inner.cssload-one {
+	 left: 0%;
+	 top: 0%;
+	 animation: cssload-rotate-one 1.15s linear infinite;
+	 -o-animation: cssload-rotate-one 1.15s linear infinite;
+	 -ms-animation: cssload-rotate-one 1.15s linear infinite;
+	 -webkit-animation: cssload-rotate-one 1.15s linear infinite;
+	 -moz-animation: cssload-rotate-one 1.15s linear infinite;
+	 border-bottom: 3px solid #235437;
+}
+ .cssload-inner.cssload-two {
+	 right: 0%;
+	 top: 0%;
+	 animation: cssload-rotate-two 1.15s linear infinite;
+	 -o-animation: cssload-rotate-two 1.15s linear infinite;
+	 -ms-animation: cssload-rotate-two 1.15s linear infinite;
+	 -webkit-animation: cssload-rotate-two 1.15s linear infinite;
+	 -moz-animation: cssload-rotate-two 1.15s linear infinite;
+	 border-right: 3px solid #767676;
+}
+ .cssload-inner.cssload-three {
+	 right: 0%;
+	 bottom: 0%;
+	 animation: cssload-rotate-three 1.15s linear infinite;
+	 -o-animation: cssload-rotate-three 1.15s linear infinite;
+	 -ms-animation: cssload-rotate-three 1.15s linear infinite;
+	 -webkit-animation: cssload-rotate-three 1.15s linear infinite;
+	 -moz-animation: cssload-rotate-three 1.15s linear infinite;
+	 border-top: 3px solid #fff;
+}
+ @keyframes cssload-rotate-one {
+	 0% {
+		 transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+	}
+	 100% {
+		 transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+	}
+}
+ @-o-keyframes cssload-rotate-one {
+	 0% {
+		 -o-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+	}
+	 100% {
+		 -o-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+	}
+}
+ @-ms-keyframes cssload-rotate-one {
+	 0% {
+		 -ms-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+	}
+	 100% {
+		 -ms-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+	}
+}
+ @-webkit-keyframes cssload-rotate-one {
+	 0% {
+		 -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+	}
+	 100% {
+		 -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+	}
+}
+ @-moz-keyframes cssload-rotate-one {
+	 0% {
+		 -moz-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+	}
+	 100% {
+		 -moz-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+	}
+}
+ @keyframes cssload-rotate-two {
+	 0% {
+		 transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+	}
+	 100% {
+		 transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+	}
+}
+ @-o-keyframes cssload-rotate-two {
+	 0% {
+		 -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+	}
+	 100% {
+		 -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+	}
+}
+ @-ms-keyframes cssload-rotate-two {
+	 0% {
+		 -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+	}
+	 100% {
+		 -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+	}
+}
+ @-webkit-keyframes cssload-rotate-two {
+	 0% {
+		 -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+	}
+	 100% {
+		 -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+	}
+}
+ @-moz-keyframes cssload-rotate-two {
+	 0% {
+		 -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+	}
+	 100% {
+		 -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+	}
+}
+ @keyframes cssload-rotate-three {
+	 0% {
+		 transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+	}
+	 100% {
+		 transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+	}
+}
+ @-o-keyframes cssload-rotate-three {
+	 0% {
+		 -o-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+	}
+	 100% {
+		 -o-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+	}
+}
+ @-ms-keyframes cssload-rotate-three {
+	 0% {
+		 -ms-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+	}
+	 100% {
+		 -ms-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+	}
+}
+ @-webkit-keyframes cssload-rotate-three {
+	 0% {
+		 -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+	}
+	 100% {
+		 -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+	}
+}
+ @-moz-keyframes cssload-rotate-three {
+	 0% {
+		 -moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+	}
+	 100% {
+		 -moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+	}
+}
+ 
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+
+    <div id="root">
+		<div id="cssload-loader">
+
+		<div class="cssload-loader">
+			<div class="cssload-inner cssload-one"></div>
+			<div class="cssload-inner cssload-two"></div>
+			<div class="cssload-inner cssload-three"></div>
+		  </div>
+		</div>
+    </div>
+    <!-- <script>
+      window.onload=function(){const e=document.getElementById("cssload-loader");e.classList.add("anim_fade_out"),setTimeout((function(){e.remove()}),300)}
+   </script> -->
+
+    <% if (process.env.NODE_ENV === 'production' &&
+    !!process.env.REACT_APP_TRACKING_ID) { %>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=%REACT_APP_TRACKING_ID%"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+    </script>
+    <% } %>
+<!--    <script type="text/javascript" src="https://pickpoint.ru/select/postamat.js" charset="utf-8"></script> -->
+  </body>
+</html>
+<!-- Global site tag (gtag.js) - Google Analytics -->

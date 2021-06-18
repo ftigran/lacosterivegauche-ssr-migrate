@@ -1,0 +1,16 @@
+.custom-slick {
+    .slick-dots li button:before {
+        font-size: 20px;
+        content: "○";
+    }
+    .slick-dots li.slick-active button:before {
+        content: "●";
+    }
+
+    &.slick-slider-variant-primary .slick-dots li button:before {
+        color: #1D92C0; 
+    }
+    &.slick-slider-variant-secondary .slick-dots li button:before {
+       color:#fff;
+    }
+}
